@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ef-H7-YbS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -100,8 +101,10 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="directorLabel" destination="HQh-a3-L66" id="KkF-gS-Isc"/>
                                     <outlet property="movieImageView" destination="SSb-Gs-R5O" id="WVe-ak-nwh"/>
                                     <outlet property="titleLabel" destination="W6Z-a1-oJk" id="tkf-oZ-C9B"/>
+                                    <outlet property="yearLabel" destination="mFq-qB-rti" id="YC6-55-9nL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -189,6 +192,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3ef-H7-YbS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tGv-V3-Avd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

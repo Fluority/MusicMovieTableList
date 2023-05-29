@@ -7,9 +7,7 @@
 
 import Foundation
 
-
 struct Song {
-#warning("movie dumy data logic")
     let track: String
     let album: String
     let cover: String
@@ -30,4 +28,27 @@ struct Song {
         return songs
     }
     
+}
+
+struct Movie {
+    let title: String
+    let poster: String
+    let year: String
+    let director: String
+    
+    static func createMovie() -> [Movie] {
+        var movies: [Movie] = []
+        
+        let titles = DataManager.shared.title
+        let posters = DataManager.shared.poster
+        let years = DataManager.shared.year
+        let directors = DataManager.shared.director
+        
+        for i in 0..<titles.count {
+            let movie = Movie(title: titles[i], poster: posters[i], year: years[i], director: directors[i])
+            movies.append(movie)
+        }
+
+        return movies
+    }
 }

@@ -11,7 +11,40 @@ import Foundation
 class DataManager {
     
     static let shared = DataManager()
-    #warning("movie dumy data")
+    
+    // Movies
+    
+    var title = [
+        "Blur",
+        "Spirited Away",
+        "Inception",
+        "Run",
+    ]
+    
+    var poster = [
+        "blur",
+        "spiritedaway",
+        "inception",
+        "run",
+    ]
+    
+    var year = [
+        "2022",
+        "2001",
+        "2010",
+        "2020",
+    ]
+    
+    var director = [
+        "Ajay Bahl",
+        "Hayao Miyazaki",
+        "Christopher Nolan",
+        "Aneesh Chaganty",
+    ]
+    
+    
+    // Music
+    
     var track = [
         "Carly Rae Japsen",
         "Dj Khaled",

@@ -10,8 +10,9 @@ import UIKit
 class MoviesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var movieImageView: UIImageView!
-    
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var directorLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,8 +21,13 @@ class MoviesTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func configure(with movie: Movie) {
+        titleLabel.text = movie.title
+        yearLabel.text = movie.year
+        directorLabel.text = movie.director
+        movieImageView.image = UIImage(named: movie.poster)
     }
 
 }
